@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="javas.js"></script>
+    <style>
+        body{
+            background-image:url(1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #calcbody{
+            height: 80vh;
+            width: 25vw;
+            border: 3px;
+            background-image: linear-gradient(to right,purple,blue);
+            border-style: inset;
+            border-color: black;
+        }
+        #infield{
+            height: 20%;
+            width: 95%;
+            background-color:aliceblue;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+        }
+        .num{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: linear-gradient(green,rgb(36, 230, 36));
+            padding: 15px 20px;
+            border-radius: 100%;
+            display: inline-block;
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-bottom: 30px;
+        }
+        .symb{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: linear-gradient(orange,red);
+            padding: 15px 20px;
+            border-radius: 100%;
+            border-color: magenta;
+            display: block;
+            margin-top: 20px; 
+            margin-left: 40px; 
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="mainbody" style="padding: 20px 500px;">
+        <div id="calcbody" style="padding-top:15px; padding-left: 15px;" >
+            <div id="infield" >
+            </div>
+            <div id="nums" style="padding-top: 30px; display: inline-block; width: 80%;">
+                <div class="num" id="1" onclick="asign(1);">1</div>
+                <div class="num" id="2" onclick="asign(2);">2</div>
+                <div class="num" id="3" onclick="asign(3);">3</div>
+                <div class="num" id="4" onclick="asign(4);">4</div>
+                <div class="num" id="5" onclick="asign(5);">5</div>
+                <div class="num" id="6" onclick="asign(6);">6</div>
+                <div class="num" id="7" onclick="asign(7);">7</div>
+                <div class="num" id="8" onclick="asign(8);">8</div>
+                <div class="num" id="9" onclick="asign(9);">9</div>
+            </div>
+            <div id="sym" style="padding-top: 30px; display: inline-block; margin-top: -95%; margin-left: 60%;">
+                <div class="symb" id="+" onclick="oper(1);">+</div>
+                <div class="symb" id="-" onclick="oper(2);">-</div>
+                <div class="symb" id="*" onclick="oper(3);">x</div>
+                <div class="symb" id="/" onclick="oper(4);">/</div>               
+            </div>
+            <div id="left" style="margin-top: -15%;">
+                <div class="num" onclick="asign(0);">0</div>
+                <div class="symb" style="background-image: linear-gradient(red,purple); display: inline;" onclick="result();">=</div>
+                <div class="symb" style="background-image: linear-gradient(rgba(255, 255, 255, 0.74),white); display: inline; margin-left: 3%;" onclick="clearit();">C</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
